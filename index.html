@@ -1100,6 +1100,112 @@
         line-height: 1.8;
         font-size: 0.98rem;
       }
+      /* BRAND AMBASSADOR */
+      .ambassador-sec {
+        background: var(--cream);
+        position: relative;
+        overflow: hidden;
+      }
+      .ambassador-sec::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        left: -80px;
+        width: 280px;
+        height: 280px;
+        background: var(--gn-100);
+        border-radius: 50%;
+        opacity: 0.45;
+        pointer-events: none;
+      }
+      .amb-img-wrap {
+        position: relative;
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        box-shadow: 0 24px 60px rgba(10, 31, 15, 0.18);
+        background: #fff;
+      }
+      .amb-img-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: 0.5s;
+      }
+      .amb-img-wrap:hover img {
+        transform: scale(1.03);
+      }
+      .amb-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        border: 1px solid var(--gn-100);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--gn-800);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      .amb-badge::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--gn-500);
+        box-shadow: 0 0 0 4px rgba(58, 138, 78, 0.18);
+      }
+      .amb-points {
+        list-style: none;
+        padding: 0;
+        margin: 24px 0 0;
+      }
+      .amb-points li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+        font-size: 0.95rem;
+        color: var(--gn-900);
+        font-weight: 500;
+      }
+      .amb-points li::before {
+        content: "";
+        flex-shrink: 0;
+        width: 22px;
+        height: 22px;
+        margin-top: 1px;
+        border-radius: 50%;
+        background: var(--gn-500)
+          url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>")
+          center/14px no-repeat;
+      }
+      .amb-quote {
+        margin-top: 26px;
+        padding: 18px 22px;
+        background: #fff;
+        border-left: 3px solid var(--gn-500);
+        border-radius: 0 var(--r-md) var(--r-md) 0;
+        font-family: "DM Serif Display", serif;
+        font-size: 1.05rem;
+        color: var(--gn-800);
+        font-style: italic;
+        line-height: 1.5;
+      }
+      .amb-quote span {
+        display: block;
+        font-family: "Outfit", sans-serif;
+        font-style: normal;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--text-muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-top: 8px;
+      }
+
       .btn-white-gn {
         background: #fff;
         color: var(--gn-800) !important;
@@ -2546,6 +2652,49 @@
             <div class="big-stat">
               <div class="big-stat-num">4,070+</div>
               <div class="big-stat-lbl">SKUs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND AMBASSADOR -->
+    <section class="sec ambassador-sec" id="ambassador">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <span class="amb-badge">Our Brand Ambassador</span>
+            <h2 class="sec-title">
+              Endorsed by <em>Raveena Tandon</em> — A Choice India Trusts.
+            </h2>
+            <p class="sec-desc mt-3">
+              When one of India's most-loved faces chooses Garden's Need,
+              dealers gain instant credibility at the counter.
+              <strong>Raveena's Choice</strong> isn't just a tagline — it's a
+              trust signal that travels with every product, helping you sell
+              faster and earn better margins.
+            </p>
+            <ul class="amb-points">
+              <li>Premium pan-India brand recall</li>
+              <li>Higher footfall &amp; faster sell-through</li>
+              <li>Co-branded marketing assets for dealers</li>
+              <li>Featured across TV, print &amp; digital campaigns</li>
+            </ul>
+            <div class="amb-quote">
+              "Every plant deserves a Garden's Need pot."
+              <span>— Raveena's Choice</span>
+            </div>
+            <a href="#get-details" class="btn-primary-gn mt-4"
+              >Become a Dealer &rarr;</a
+            >
+          </div>
+          <div class="col-lg-6">
+            <div class="amb-img-wrap">
+              <img
+                src="brand-ambassador.jpeg"
+                alt="Raveena Tandon — Garden's Need Brand Ambassador holding a Poppy Pot"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
