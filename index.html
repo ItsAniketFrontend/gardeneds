@@ -1,0 +1,2993 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garden's Need — Dealership Opportunity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <style>
+      :root {
+        --gn-950: #0a1f0f;
+        --gn-900: #122b18;
+        --gn-800: #1a3d22;
+        --gn-700: #245430;
+        --gn-600: #2d6b3c;
+        --gn-500: #3a8a4e;
+        --gn-400: #52a865;
+        --gn-300: #7fc491;
+        --gn-200: #b0dbb9;
+        --gn-100: #d8f0de;
+        --gn-50: #eef8f0;
+        --cream: #faf8f3;
+        --text-dark: #111a14;
+        --text-mid: #3a4d3e;
+        --text-muted: #6b7f6e;
+        --r-sm: 8px;
+        --r-md: 14px;
+        --r-lg: 22px;
+        --r-xl: 32px;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        background: var(--cream);
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "DM Serif Display", serif;
+        line-height: 1.18;
+      }
+
+      /* NAVBAR */
+      .gn-nav {
+        background: rgba(250, 248, 243, 0.94);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(42, 100, 55, 0.12);
+        position: sticky;
+        top: 0;
+        z-index: 1030;
+        padding: 12px 0;
+      }
+      .gn-logo {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .gn-logo img {
+        height: 44px;
+        width: auto;
+        display: block;
+      }
+      .btn-nav {
+        background: var(--gn-700);
+        color: #fff !important;
+        border: none;
+        padding: 10px 22px;
+        border-radius: 50px;
+        font-family: "Outfit", sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.2s;
+        white-space: nowrap;
+        display: inline-block;
+      }
+      .btn-nav:hover {
+        background: var(--gn-800);
+        transform: translateY(-1px);
+      }
+
+      /* HERO */
+      .hero-wrap {
+        background: linear-gradient(135deg, #faf8f3 0%, #f3f9f4 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-wrap::before {
+        content: "";
+        position: absolute;
+        top: -140px;
+        right: -120px;
+        width: 580px;
+        height: 580px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(127, 196, 145, 0.32) 0%,
+          rgba(176, 219, 185, 0.16) 50%,
+          transparent 75%
+        );
+        pointer-events: none;
+        z-index: 0;
+      }
+      .hero-wrap::after {
+        content: "";
+        position: absolute;
+        bottom: -160px;
+        left: -120px;
+        width: 460px;
+        height: 460px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(82, 168, 101, 0.18) 0%,
+          transparent 72%
+        );
+        pointer-events: none;
+        z-index: 0;
+      }
+      .hero-leaf {
+        position: absolute;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.16;
+      }
+      .hero-leaf path {
+        fill: var(--gn-700);
+      }
+      .hero-leaf-1 {
+        top: 70px;
+        right: 5%;
+        width: 130px;
+        animation: leafFloatA 7s ease-in-out infinite;
+      }
+      .hero-leaf-2 {
+        bottom: 40px;
+        left: 3%;
+        width: 95px;
+        animation: leafFloatB 8s ease-in-out infinite;
+      }
+      .hero-leaf-3 {
+        top: 42%;
+        right: 36%;
+        width: 70px;
+        opacity: 0.1;
+        animation: leafFloatA 9s ease-in-out infinite reverse;
+      }
+      @keyframes leafFloatA {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-14px) rotate(8deg);
+        }
+      }
+      @keyframes leafFloatB {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-25deg);
+        }
+        50% {
+          transform: translateY(-10px) rotate(-15deg);
+        }
+      }
+      @media (max-width: 991px) {
+        .hero-leaf-3 {
+          display: none;
+        }
+        .hero-leaf-1 {
+          width: 80px;
+          top: 24px;
+          right: 4%;
+        }
+        .hero-leaf-2 {
+          width: 60px;
+          bottom: 20px;
+        }
+      }
+      .hero-left {
+        padding: 90px 0 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid var(--gn-200);
+        color: var(--gn-700);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 8px 18px;
+        border-radius: 50px;
+        margin-bottom: 26px;
+        width: fit-content;
+        box-shadow: 0 4px 14px rgba(10, 31, 15, 0.06);
+      }
+      .hero-badge::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--gn-500);
+        flex-shrink: 0;
+        box-shadow: 0 0 0 0 rgba(82, 168, 101, 0.6);
+        animation: dotPulse 2.4s ease-out infinite;
+      }
+      @keyframes dotPulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(82, 168, 101, 0.55);
+        }
+        70% {
+          box-shadow: 0 0 0 9px rgba(82, 168, 101, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(82, 168, 101, 0);
+        }
+      }
+
+      /* PREMIUM TRUST STRIP */
+      .hero-trust {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+        margin: 6px 0 30px;
+        padding: 12px 20px 12px 16px;
+        background: #fff;
+        border: 1px solid var(--gn-100);
+        border-radius: 60px;
+        box-shadow: 0 10px 28px rgba(10, 31, 15, 0.08);
+        max-width: fit-content;
+      }
+      .hero-trust-stars {
+        display: flex;
+        gap: 2px;
+        flex-shrink: 0;
+      }
+      .hero-trust-stars svg {
+        width: 16px;
+        height: 16px;
+        fill: #f5b400;
+      }
+      .hero-trust-text strong {
+        display: block;
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--gn-900);
+        line-height: 1.2;
+      }
+      .hero-trust-text span {
+        display: block;
+        font-size: 0.74rem;
+        color: var(--text-muted);
+        margin-top: 2px;
+      }
+      @media (max-width: 575px) {
+        .hero-trust {
+          padding: 10px 16px 10px 14px;
+          gap: 12px;
+        }
+        .hero-trust-stars svg {
+          width: 13px;
+          height: 13px;
+        }
+        .hero-trust-text strong {
+          font-size: 0.85rem;
+        }
+        .hero-trust-text span {
+          font-size: 0.7rem;
+        }
+      }
+
+      /* FLOATING BADGE ON FORM PANEL */
+      .hero-panel-float {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        background: #fff;
+        padding: 8px 16px 8px 8px;
+        border-radius: 50px;
+        box-shadow: 0 12px 30px rgba(10, 31, 15, 0.22);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 3;
+        animation: floatBadge 5s ease-in-out infinite;
+      }
+      @keyframes floatBadge {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+      .hero-panel-float-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--gn-50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .hero-panel-float-icon svg {
+        width: 17px;
+        height: 17px;
+        fill: var(--gn-700);
+      }
+      .hero-panel-float-text strong {
+        font-family: "DM Serif Display", serif;
+        font-size: 0.98rem;
+        color: var(--gn-900);
+        display: block;
+        line-height: 1.05;
+      }
+      .hero-panel-float-text span {
+        font-size: 0.62rem;
+        color: var(--text-muted);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .hero-panel-float-bottom {
+        right: 24px;
+        bottom: 28px;
+        left: auto;
+        top: auto;
+        animation-delay: 1.2s;
+      }
+      @media (max-width: 1199px) {
+        .hero-panel-float {
+          display: none;
+        }
+      }
+      .hero-title {
+        font-size: clamp(2.3rem, 4vw, 3.8rem);
+        color: var(--gn-900);
+        margin-bottom: 20px;
+        line-height: 1.12;
+      }
+      .hero-title em {
+        font-style: italic;
+        color: var(--gn-600);
+      }
+      .hero-sub {
+        font-size: 1rem;
+        color: var(--text-mid);
+        line-height: 1.82;
+        margin-bottom: 18px;
+        max-width: 500px;
+      }
+      .trust-chips {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+      .t-chip {
+        font-size: 0.77rem;
+        color: var(--text-muted);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .t-chip svg {
+        width: 14px;
+        height: 14px;
+        fill: var(--gn-500);
+      }
+      .btn-primary-gn {
+        background: var(--gn-700);
+        color: #fff !important;
+        padding: 14px 30px;
+        border-radius: 50px;
+        font-family: "Outfit", sans-serif;
+        font-size: 0.92rem;
+        font-weight: 700;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 6px 22px rgba(42, 100, 55, 0.3);
+        transition: 0.2s;
+        display: inline-block;
+      }
+      .btn-primary-gn:hover {
+        background: var(--gn-800);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(42, 100, 55, 0.38);
+      }
+      .btn-outline-gn {
+        border: 1.5px solid var(--gn-300);
+        color: var(--gn-700) !important;
+        padding: 13px 26px;
+        border-radius: 50px;
+        font-family: "Outfit", sans-serif;
+        font-size: 0.88rem;
+        font-weight: 600;
+        text-decoration: none;
+        background: transparent;
+        transition: 0.2s;
+        display: inline-block;
+      }
+      .btn-outline-gn:hover {
+        border-color: var(--gn-600);
+        background: var(--gn-50);
+      }
+
+      /* FORM PANEL */
+      .hero-form-panel {
+        background: var(--gn-900);
+        background-image: linear-gradient(
+            135deg,
+            rgba(10, 31, 15, 0.78),
+            rgba(18, 43, 24, 0.85)
+          ),
+          url("Ultra-realistic_luxury_home_decor_editorial_202605061523.jpeg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 40px;
+        position: relative;
+        min-height: 100%;
+      }
+      .hero-form-panel::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      /* BUSINESS TYPES GRID */
+      .biz-types-sec {
+        background: var(--cream);
+      }
+      .biz-types-sec .biz-sec-lead {
+        max-width: 540px;
+        margin: 0 auto;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+      /* BENTO GRID */
+      .bento-grid {
+        display: grid;
+        gap: 18px;
+      }
+      @media (min-width: 992px) {
+        .bento-grid {
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: 230px;
+          grid-template-areas:
+            "a a b"
+            "a a c"
+            "d e f";
+        }
+        .bento-grid .b1 { grid-area: a; }
+        .bento-grid .b2 { grid-area: b; }
+        .bento-grid .b3 { grid-area: c; }
+        .bento-grid .b4 { grid-area: d; }
+        .bento-grid .b5 { grid-area: e; }
+        .bento-grid .b6 { grid-area: f; }
+        .bento-grid .biz-card.feat-big .biz-card-title {
+          font-size: 2.4rem;
+        }
+        .bento-grid .biz-card.feat-big .biz-card-desc {
+          font-size: 0.95rem;
+        }
+      }
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        .bento-grid {
+          grid-template-columns: 1fr 1fr;
+          grid-auto-rows: 220px;
+        }
+      }
+      @media (max-width: 575.98px) {
+        .bento-grid {
+          grid-template-columns: 1fr;
+          grid-auto-rows: 240px;
+        }
+      }
+      .biz-card {
+        position: relative;
+        display: block;
+        border-radius: var(--r-md);
+        overflow: hidden;
+        text-decoration: none;
+        background: var(--gn-900);
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 12px 32px rgba(10, 31, 15, 0.12);
+        transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1),
+          box-shadow 0.35s ease;
+      }
+      .biz-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 22px 50px rgba(10, 31, 15, 0.22);
+      }
+      .biz-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1);
+      }
+      .biz-card:hover img {
+        transform: scale(1.07);
+      }
+      .biz-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(10, 31, 15, 0.88) 0%,
+          rgba(10, 31, 15, 0.18) 55%,
+          transparent 100%
+        );
+        transition: 0.35s;
+      }
+      .biz-card:hover::after {
+        background: linear-gradient(
+          to top,
+          rgba(10, 31, 15, 0.94) 0%,
+          rgba(10, 31, 15, 0.45) 55%,
+          rgba(10, 31, 15, 0.1) 100%
+        );
+      }
+      .biz-card-num {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        padding: 5px 12px;
+        border-radius: 50px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        color: #fff;
+        z-index: 2;
+      }
+      .biz-card-content {
+        position: absolute;
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+        z-index: 2;
+        color: #fff;
+      }
+      .biz-card-title {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin: 0 0 6px;
+      }
+      .biz-card-desc {
+        font-size: 0.82rem;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.86);
+        margin: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.4s ease,
+          margin 0.4s ease;
+      }
+      .biz-card-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.74rem;
+        font-weight: 700;
+        color: var(--gn-200);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: 0.4s;
+      }
+      .biz-card:hover .biz-card-desc {
+        max-height: 100px;
+        opacity: 1;
+        margin-top: 8px;
+      }
+      .biz-card:hover .biz-card-cta {
+        max-height: 30px;
+        opacity: 1;
+        margin-top: 10px;
+      }
+      @media (hover: none) {
+        .biz-card-desc {
+          max-height: 100px;
+          opacity: 1;
+          margin-top: 8px;
+        }
+        .biz-card-cta {
+          max-height: 30px;
+          opacity: 1;
+          margin-top: 10px;
+        }
+      }
+
+      /* INLINE MOBILE HERO FORM */
+      .hero-form-mobile {
+        margin-top: 36px;
+        padding: 30px 22px;
+        border-radius: var(--r-lg);
+        background: var(--gn-900);
+        background-image: linear-gradient(
+            135deg,
+            rgba(10, 31, 15, 0.86),
+            rgba(18, 43, 24, 0.92)
+          ),
+          url("Ultra-realistic_luxury_home_decor_editorial_202605061523.jpeg");
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 18px 40px rgba(10, 31, 15, 0.22);
+      }
+      .hero-form-mobile .form-card {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 30px 24px;
+      }
+
+      /* HERO PHOTO STRIP */
+      .hero-photo-wrap {
+        position: relative;
+        margin-top: 36px;
+        max-width: 540px;
+      }
+      .hero-photo-main {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: var(--r-lg);
+        box-shadow: 0 24px 60px rgba(10, 31, 15, 0.18);
+        display: block;
+      }
+      .hero-photo-tag {
+        position: absolute;
+        bottom: -22px;
+        left: 22px;
+        background: #fff;
+        padding: 12px 18px;
+        border-radius: 50px;
+        box-shadow: 0 14px 32px rgba(10, 31, 15, 0.14);
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--gn-800);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .hero-photo-tag::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--gn-500);
+      }
+
+      /* LEGACY IMAGE */
+      .legacy-img-wrap {
+        position: relative;
+        margin-bottom: 28px;
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        box-shadow: 0 18px 48px rgba(10, 31, 15, 0.16);
+      }
+      .legacy-img-wrap img {
+        width: 100%;
+        height: auto;
+        max-height: 560px;
+        object-fit: contain;
+        display: block;
+        background: var(--gn-50);
+        transition: 0.4s;
+      }
+      .legacy-img-wrap:hover img {
+        transform: scale(1.04);
+      }
+      .legacy-img-badge {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--gn-800);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      /* PRODUCT IMAGE OVERRIDES */
+      .prod-img {
+        height: 200px !important;
+        padding: 0 !important;
+        overflow: hidden;
+      }
+      .prod-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: 0.35s;
+      }
+      .product-card:hover .prod-img img {
+        transform: scale(1.06);
+      }
+
+      /* SERVICES IMAGE */
+      .services-img-wrap {
+        position: relative;
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        box-shadow: 0 18px 48px rgba(10, 31, 15, 0.18);
+        height: 100%;
+        min-height: 360px;
+      }
+      .services-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .services-img-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(10, 31, 15, 0.7),
+          rgba(10, 31, 15, 0.05)
+        );
+      }
+      .services-img-caption {
+        position: absolute;
+        bottom: 26px;
+        left: 26px;
+        right: 26px;
+        color: #fff;
+      }
+      .services-img-caption .small-lbl {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gn-300);
+        margin-bottom: 6px;
+      }
+      .services-img-caption .big-q {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.4rem;
+        line-height: 1.25;
+      }
+
+      /* FINAL CTA BACKGROUND */
+      .final-cta {
+        position: relative;
+        overflow: hidden;
+      }
+      .final-cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(
+            rgba(10, 31, 15, 0.86),
+            rgba(10, 31, 15, 0.92)
+          ),
+          url("A_premium_luxury_interior_corner_202605051701.jpeg");
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+      }
+      .final-cta > .container {
+        position: relative;
+        z-index: 1;
+      }
+      .form-card {
+        background: #fff;
+        border-radius: var(--r-lg);
+        padding: 36px 30px;
+        width: 100%;
+        max-width: 360px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+      }
+      .form-card-title {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.3rem;
+        color: var(--gn-900);
+        margin-bottom: 4px;
+      }
+      .form-card-sub {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        margin-bottom: 22px;
+      }
+      .flbl {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--text-mid);
+        margin-bottom: 5px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .finp {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1.5px solid #e2e8e4;
+        border-radius: var(--r-sm);
+        font-family: "Outfit", sans-serif;
+        font-size: 0.87rem;
+        color: var(--text-dark);
+        background: #fafaf9;
+        outline: none;
+        transition: 0.2s;
+        margin-bottom: 12px;
+      }
+      .finp:focus {
+        border-color: var(--gn-400);
+        background: #fff;
+      }
+      .fsubmit {
+        width: 100%;
+        background: var(--gn-700);
+        color: #fff;
+        border: none;
+        padding: 13px;
+        border-radius: var(--r-sm);
+        font-family: "Outfit", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+        letter-spacing: 0.02em;
+        transition: 0.2s;
+        margin-top: 4px;
+      }
+      .fsubmit:hover {
+        background: var(--gn-800);
+      }
+      .fnote {
+        text-align: center;
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+
+      /* STAT BAR */
+      .stat-bar {
+        background: var(--gn-800);
+      }
+      .stat-item {
+        padding: 22px 20px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .stat-item:last-child {
+        border-right: none;
+      }
+      .stat-icon {
+        width: 42px;
+        height: 42px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--r-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .stat-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: var(--gn-300);
+      }
+      .stat-lbl {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+      }
+      .stat-val {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.5rem;
+        color: #fff;
+        line-height: 1.1;
+      }
+
+      /* SECTIONS */
+      .sec {
+        padding: 90px 0;
+      }
+      .sec-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gn-500);
+        margin-bottom: 12px;
+      }
+      .sec-title {
+        font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+        color: var(--gn-900);
+        margin-bottom: 14px;
+      }
+      .sec-title em {
+        font-style: italic;
+        color: var(--gn-600);
+      }
+      .sec-desc {
+        font-size: 1rem;
+        color: var(--text-mid);
+        line-height: 1.82;
+      }
+
+      /* LEGACY */
+      .legacy-sec {
+        background: var(--cream);
+        position: relative;
+        overflow: hidden;
+      }
+      .legacy-sec::after {
+        content: '"';
+        position: absolute;
+        bottom: -80px;
+        right: 3%;
+        font-family: "DM Serif Display", serif;
+        font-size: 260px;
+        color: var(--gn-100);
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+      }
+      .legacy-point {
+        display: flex;
+        gap: 16px;
+        padding: 22px;
+        background: #fff;
+        border-radius: var(--r-md);
+        border: 1px solid var(--gn-100);
+        transition: 0.22s;
+        margin-bottom: 14px;
+      }
+      .legacy-point:last-child {
+        margin-bottom: 0;
+      }
+      .legacy-point:hover {
+        border-color: var(--gn-300);
+        transform: translateX(5px);
+      }
+      .pt-dot {
+        width: 40px;
+        height: 40px;
+        background: var(--gn-50);
+        border-radius: var(--r-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .pt-dot svg {
+        width: 18px;
+        height: 18px;
+        fill: var(--gn-600);
+      }
+      .pt-title {
+        font-size: 0.93rem;
+        font-weight: 700;
+        color: var(--gn-900);
+        margin-bottom: 4px;
+      }
+      .pt-desc {
+        font-size: 0.83rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        margin: 0;
+      }
+
+      /* WHY */
+      .why-sec {
+        background: #fff;
+      }
+      .feat-card {
+        background: var(--cream);
+        border: 1px solid var(--gn-100);
+        border-radius: var(--r-md);
+        padding: 28px 24px;
+        transition: 0.22s;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+      .feat-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: var(--gn-50);
+        transform: translate(28px, 28px);
+        transition: 0.3s;
+      }
+      .feat-card:hover {
+        border-color: var(--gn-300);
+        transform: translateY(-5px);
+        background: var(--gn-50);
+      }
+      .feat-card:hover::after {
+        transform: translate(14px, 14px);
+      }
+      .feat-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--gn-100);
+        border-radius: var(--r-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+      .feat-icon svg {
+        width: 22px;
+        height: 22px;
+        fill: var(--gn-700);
+      }
+      .feat-title {
+        font-size: 0.97rem;
+        font-weight: 700;
+        color: var(--gn-900);
+        margin-bottom: 8px;
+      }
+      .feat-desc {
+        font-size: 0.83rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        margin: 0;
+      }
+
+      /* MARKET */
+      .market-sec {
+        background: var(--gn-900);
+        padding: 90px 0;
+      }
+      .market-sec .sec-title {
+        color: #fff;
+      }
+      .market-sec .sec-label {
+        color: var(--gn-300);
+      }
+      .market-sec p.body-p {
+        color: rgba(255, 255, 255, 0.68);
+        line-height: 1.8;
+        font-size: 0.98rem;
+      }
+      .btn-white-gn {
+        background: #fff;
+        color: var(--gn-800) !important;
+        padding: 13px 28px;
+        border-radius: 50px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 700;
+        font-size: 0.88rem;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        transition: 0.2s;
+      }
+      .btn-white-gn:hover {
+        background: var(--gn-50);
+        transform: translateY(-1px);
+      }
+      .who-card {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: var(--r-md);
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        transition: 0.2s;
+        height: 100%;
+      }
+      .who-card:hover {
+        background: rgba(255, 255, 255, 0.13);
+      }
+      .who-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--r-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .who-icon svg {
+        width: 18px;
+        height: 18px;
+        fill: var(--gn-300);
+      }
+      .who-name {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #fff;
+        margin: 0;
+      }
+
+      /* CTA BANNER */
+      .cta-banner {
+        background: var(--gn-700);
+        padding: 52px 0;
+      }
+      .cta-banner h2 {
+        font-size: clamp(1.5rem, 3vw, 2.2rem);
+        color: #fff;
+        margin-bottom: 0;
+      }
+      .cta-banner h2 em {
+        font-style: italic;
+        color: var(--gn-200);
+      }
+
+      /* PRODUCTS */
+      .products-sec {
+        background: var(--cream);
+      }
+      .product-card {
+        background: #fff;
+        border: 1px solid var(--gn-100);
+        border-radius: var(--r-md);
+        overflow: hidden;
+        transition: 0.22s;
+        text-align: center;
+        height: 100%;
+      }
+      .product-card:hover {
+        border-color: var(--gn-300);
+        transform: translateY(-5px);
+      }
+      .prod-img {
+        height: 110px;
+        background: var(--gn-50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .prod-img svg {
+        width: 44px;
+        height: 44px;
+        fill: var(--gn-400);
+        opacity: 0.75;
+      }
+      .prod-name {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--gn-900);
+        padding: 12px 10px;
+        line-height: 1.35;
+      }
+
+      /* TRUSTED */
+      .trusted-sec {
+        background: #fff;
+      }
+      .big-stat {
+        background: var(--gn-900);
+        border-radius: var(--r-md);
+        padding: 26px 14px;
+        text-align: center;
+      }
+      .big-stat-num {
+        font-family: "DM Serif Display", serif;
+        font-size: 2rem;
+        color: var(--gn-300);
+        line-height: 1.1;
+      }
+      .big-stat-lbl {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 4px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+      }
+
+      /* MFG */
+      .mfg-sec {
+        background: var(--cream);
+      }
+      .mfg-card {
+        background: #fff;
+        border: 1px solid var(--gn-100);
+        border-radius: var(--r-md);
+        padding: 30px 24px;
+        text-align: center;
+        height: 100%;
+      }
+      .mfg-icon {
+        width: 54px;
+        height: 54px;
+        background: var(--gn-50);
+        border-radius: var(--r-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+      }
+      .mfg-icon svg {
+        width: 24px;
+        height: 24px;
+        fill: var(--gn-600);
+      }
+      .mfg-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--gn-900);
+        margin-bottom: 8px;
+      }
+      .mfg-desc {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        margin: 0;
+      }
+      .cert-badge {
+        background: #fff;
+        border: 1.5px solid var(--gn-200);
+        border-radius: var(--r-sm);
+        padding: 12px 22px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--gn-700);
+        letter-spacing: 0.06em;
+      }
+
+      /* SERVICES */
+      .services-sec {
+        background: #fff;
+      }
+      .service-card {
+        border: 1px solid var(--gn-100);
+        border-radius: var(--r-md);
+        padding: 28px 24px;
+        background: var(--cream);
+        transition: 0.22s;
+        height: 100%;
+      }
+      .service-card:hover {
+        border-color: var(--gn-400);
+        transform: translateY(-4px);
+      }
+      .serv-icon {
+        width: 50px;
+        height: 50px;
+        background: var(--gn-800);
+        border-radius: var(--r-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+      .serv-icon svg {
+        width: 22px;
+        height: 22px;
+        fill: var(--gn-200);
+      }
+      .serv-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--gn-900);
+        margin-bottom: 8px;
+      }
+      .serv-desc {
+        font-size: 0.83rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        margin: 0;
+      }
+      .portfolio-box {
+        background: var(--gn-900);
+        border-radius: var(--r-xl);
+        padding: 50px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+      .portfolio-box h3 {
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+        color: #fff;
+        margin: 0;
+      }
+      .portfolio-box h3 em {
+        font-style: italic;
+        color: var(--gn-300);
+      }
+
+      /* LANDSCAPE */
+      .landscape-sec {
+        background: var(--cream);
+      }
+      .landscape-inner {
+        background: #fff;
+        border: 1px solid var(--gn-100);
+        border-radius: var(--r-xl);
+        padding: 56px 50px;
+      }
+      .value-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 14px 16px;
+        border-radius: var(--r-sm);
+        transition: 0.2s;
+        margin-bottom: 10px;
+      }
+      .value-row:hover {
+        background: var(--gn-50);
+      }
+      .val-check {
+        width: 28px;
+        height: 28px;
+        background: var(--gn-100);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .val-check svg {
+        width: 13px;
+        height: 13px;
+        fill: var(--gn-700);
+      }
+      .val-title {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--gn-900);
+        margin-bottom: 3px;
+      }
+      .val-desc {
+        font-size: 0.81rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin: 0;
+      }
+      .client-point {
+        background: var(--cream);
+        border-radius: var(--r-sm);
+        padding: 18px 20px;
+        border-left: 3px solid var(--gn-400);
+        margin-bottom: 14px;
+      }
+      .client-point:last-child {
+        margin-bottom: 0;
+      }
+      .cp-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--gn-900);
+        margin-bottom: 4px;
+      }
+      .cp-desc {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* FINAL CTA */
+      .final-cta {
+        background: var(--gn-900);
+        padding: 90px 0;
+        text-align: center;
+      }
+      .final-cta h2 {
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        color: #fff;
+        margin-bottom: 16px;
+      }
+      .final-cta h2 em {
+        font-style: italic;
+        color: var(--gn-300);
+      }
+      .final-cta p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1rem;
+        line-height: 1.78;
+        max-width: 500px;
+        margin: 0 auto 34px;
+      }
+
+      /* FOOTER */
+      .gn-footer {
+        background: var(--gn-950);
+        padding: 34px 0;
+      }
+      .footer-logo img {
+        height: 36px;
+        width: auto;
+        display: block;
+        filter: invert(1) brightness(2);
+      }
+      .footer-copy {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.32);
+      }
+      .footer-cert {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.38);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 4px 12px;
+        border-radius: 50px;
+        letter-spacing: 0.05em;
+      }
+
+      /* STICKY CTA STACK */
+      .sticky-cta-stack {
+        position: fixed;
+        right: 22px;
+        bottom: 24px;
+        z-index: 1040;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-end;
+        opacity: 0;
+        transform: translateY(24px);
+        pointer-events: none;
+        transition: opacity 0.35s ease, transform 0.35s ease;
+      }
+      .sticky-cta-stack.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sticky-fab-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff !important;
+        border: 2px solid rgba(255, 255, 255, 0.85);
+        cursor: pointer;
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22),
+          0 4px 10px rgba(0, 0, 0, 0.12);
+        transition: 0.28s cubic-bezier(0.2, 0.7, 0.3, 1);
+        position: relative;
+      }
+      .sticky-fab-icon::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.18);
+        opacity: 0;
+        transition: 0.25s;
+      }
+      .sticky-fab-icon:hover {
+        transform: translateY(-3px) scale(1.04);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+          0 6px 14px rgba(0, 0, 0, 0.16);
+      }
+      .sticky-fab-icon:hover::after {
+        opacity: 1;
+      }
+      .sticky-fab-icon svg {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+        position: relative;
+        z-index: 1;
+      }
+      .sticky-fab-call {
+        background: linear-gradient(135deg, #34a853 0%, #1f6f3a 100%);
+      }
+      .sticky-fab-wa {
+        background: linear-gradient(135deg, #25d366 0%, #128c4f 100%);
+      }
+      .sticky-fab-pill {
+        height: 58px;
+        padding: 0 24px 0 22px;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: #fff !important;
+        background: linear-gradient(135deg, #2d6b3c 0%, #122b18 100%);
+        font-family: "Outfit", sans-serif;
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 18px 38px rgba(18, 43, 24, 0.4),
+          0 4px 12px rgba(0, 0, 0, 0.14);
+        position: relative;
+        overflow: hidden;
+        transition: 0.28s cubic-bezier(0.2, 0.7, 0.3, 1);
+      }
+      .sticky-fab-pill::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -80%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.18) 50%,
+          transparent 100%
+        );
+        animation: fabShimmer 3s ease-in-out infinite;
+      }
+      @keyframes fabShimmer {
+        0%,
+        70% {
+          left: -80%;
+        }
+        100% {
+          left: 130%;
+        }
+      }
+      .sticky-fab-pill:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 22px 44px rgba(18, 43, 24, 0.48),
+          0 6px 14px rgba(0, 0, 0, 0.18);
+      }
+      .sticky-fab-pill .pill-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.18);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .sticky-fab-pill .pill-icon svg {
+        width: 18px;
+        height: 18px;
+        fill: #fff;
+      }
+      .sticky-fab-pill .pill-arrow {
+        font-size: 1.05rem;
+        margin-left: 2px;
+        transition: 0.25s;
+      }
+      .sticky-fab-pill:hover .pill-arrow {
+        transform: translateX(4px);
+      }
+
+      @media (max-width: 575px) {
+        .sticky-cta-stack {
+          left: 12px;
+          right: 12px;
+          bottom: 12px;
+          flex-direction: row;
+          gap: 10px;
+          align-items: stretch;
+          justify-content: flex-end;
+        }
+        .sticky-fab-icon {
+          width: 50px;
+          height: 50px;
+          border-width: 1.5px;
+        }
+        .sticky-fab-icon svg {
+          width: 22px;
+          height: 22px;
+        }
+        .sticky-fab-pill {
+          flex: 1;
+          height: 52px;
+          padding: 0 18px;
+          font-size: 0.88rem;
+          gap: 10px;
+          justify-content: center;
+        }
+        .sticky-fab-pill .pill-icon {
+          width: 30px;
+          height: 30px;
+        }
+        .sticky-fab-pill .pill-icon svg {
+          width: 15px;
+          height: 15px;
+        }
+        body {
+          padding-bottom: 84px;
+        }
+      }
+
+      /* ENQUIRY MODAL */
+      #enquiryModal .modal-dialog {
+        max-width: 420px;
+      }
+      #enquiryModal .modal-content {
+        border: none;
+        border-radius: var(--r-lg);
+        background: var(--gn-900);
+        background-image: linear-gradient(
+            135deg,
+            rgba(10, 31, 15, 0.86),
+            rgba(18, 43, 24, 0.92)
+          ),
+          url("Ultra-realistic_luxury_home_decor_editorial_202605061523.jpeg");
+        background-size: cover;
+        background-position: center;
+        padding: 36px 28px;
+        position: relative;
+      }
+      #enquiryModal .form-card {
+        margin: 0 auto;
+      }
+      .modal-close-x {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.18);
+        color: #fff;
+        border: none;
+        font-size: 1.4rem;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 2;
+        transition: 0.2s;
+      }
+      .modal-close-x:hover {
+        background: rgba(255, 255, 255, 0.32);
+      }
+
+      /* ANIMATIONS */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(26px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .hero-left > * {
+        animation: fadeUp 0.6s ease both;
+      }
+      .hero-left > *:nth-child(1) {
+        animation-delay: 0.06s;
+      }
+      .hero-left > *:nth-child(2) {
+        animation-delay: 0.16s;
+      }
+      .hero-left > *:nth-child(3) {
+        animation-delay: 0.26s;
+      }
+      .hero-left > *:nth-child(4) {
+        animation-delay: 0.36s;
+      }
+      .hero-left > *:nth-child(5) {
+        animation-delay: 0.46s;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 991px) {
+        .hero-form-panel {
+          min-height: auto;
+          padding: 50px 24px;
+          background-image: linear-gradient(
+              135deg,
+              rgba(10, 31, 15, 0.86),
+              rgba(18, 43, 24, 0.92)
+            ),
+            url("Ultra-realistic_luxury_home_decor_editorial_202605061523.jpeg");
+        }
+        .hero-left {
+          padding: 60px 0 40px;
+        }
+        .landscape-inner {
+          padding: 36px 24px;
+        }
+        .portfolio-box {
+          padding: 36px 28px;
+        }
+      }
+      @media (max-width: 767px) {
+        .stat-item {
+          border-right: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 16px 14px;
+        }
+        .stat-item:last-child {
+          border-bottom: none;
+        }
+        .sec {
+          padding: 60px 0;
+        }
+        .cta-banner {
+          text-align: center;
+        }
+        .hero-form-panel {
+          padding: 36px 18px 44px;
+        }
+        .hero-form-panel .form-card {
+          max-width: 100%;
+          padding: 32px 24px;
+        }
+      }
+      @media (max-width: 575px) {
+        .portfolio-box {
+          padding: 28px 20px;
+          flex-direction: column;
+          text-align: center;
+        }
+        .landscape-inner {
+          padding: 28px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="gn-nav">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="#" class="gn-logo" aria-label="Garden's Need home">
+          <img src="logo.jpg" alt="Garden's Need — Growing Together Purposefully Since 1976" />
+        </a>
+        <a href="#get-details" class="btn-nav">Get Dealership Details</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-wrap" id="top">
+      <!-- Decorative botanical accents -->
+      <svg class="hero-leaf hero-leaf-1" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s2-2 4-2c0 0-3.17-1-6 1z"
+        />
+      </svg>
+      <svg class="hero-leaf hero-leaf-2" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s2-2 4-2c0 0-3.17-1-6 1z"
+        />
+      </svg>
+      <svg class="hero-leaf hero-leaf-3" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s2-2 4-2c0 0-3.17-1-6 1z"
+        />
+      </svg>
+
+      <div class="container-fluid px-0">
+        <div class="row g-0 align-items-stretch">
+          <div class="col-lg-7">
+            <div class="hero-left px-4 px-md-5">
+              <div class="hero-badge">
+                Established 1976 &middot; 50 Years of Trust
+              </div>
+              <h1 class="hero-title">
+                50 Years of Trust.<br /><em>5,000+ Dealers.</em><br />One
+                Growing Opportunity.
+              </h1>
+              <p class="hero-sub">
+                Partner with Garden's Need — India's most dependable planter
+                brand trusted across 200+ cities. ISO certified. Strong margins.
+                Consistent supply.
+              </p>
+
+              <!-- INLINE MOBILE FORM (only visible on <lg) -->
+              <div class="hero-form-mobile d-lg-none" id="get-details-m">
+                <div class="form-card">
+                  <p class="form-card-title">Get Dealership Details</p>
+                  <p class="form-card-sub">
+                    Our team will contact you within 24 hours
+                  </p>
+                  <label class="flbl">Name</label>
+                  <input
+                    class="finp"
+                    type="text"
+                    placeholder="Your full name"
+                  />
+                  <label class="flbl">Phone</label>
+                  <input
+                    class="finp"
+                    type="tel"
+                    placeholder="+91 00000 00000"
+                  />
+                  <label class="flbl">Business Type</label>
+                  <select class="finp">
+                    <option value>Select Business Type</option>
+                    <option>Hardware Store</option>
+                    <option>Nursery</option>
+                    <option>Distributor</option>
+                    <option>Home D&eacute;cor Retailer</option>
+                  </select>
+                  <button class="fsubmit">
+                    Get Dealership Details &rarr;
+                  </button>
+                  <p class="fnote">We'll respond within 24 hours</p>
+                </div>
+              </div>
+
+              <div class="hero-trust">
+                <div class="hero-trust-stars" aria-label="5 star rating">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <div class="hero-trust-text">
+                  <strong>Trusted by 900+ Active Dealers</strong>
+                  <span>ISO 9001:2015 &middot; 200+ Cities &middot; Export Quality</span>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#get-details" class="btn-primary-gn"
+                  >Get Dealership Details</a
+                >
+                <a href="#why" class="btn-outline-gn">Why Garden's Need?</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 hero-form-panel d-none d-lg-flex" id="get-details">
+            <div class="hero-panel-float">
+              <div class="hero-panel-float-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                  />
+                </svg>
+              </div>
+              <div class="hero-panel-float-text">
+                <strong>900+</strong>
+                <span>Active Dealers</span>
+              </div>
+            </div>
+            <div class="hero-panel-float hero-panel-float-bottom">
+              <div class="hero-panel-float-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                  />
+                </svg>
+              </div>
+              <div class="hero-panel-float-text">
+                <strong>ISO 9001</strong>
+                <span>Certified</span>
+              </div>
+            </div>
+            <div class="form-card">
+              <p class="form-card-title">Get Dealership Details</p>
+              <p class="form-card-sub">
+                Our team will contact you within 24 hours
+              </p>
+              <label class="flbl">Name</label>
+              <input class="finp" type="text" placeholder="Your full name" />
+              <label class="flbl">Phone</label>
+              <input class="finp" type="tel" placeholder="+91 00000 00000" />
+              <label class="flbl">Business Type</label>
+              <select class="finp">
+                <option value>Select Business Type</option>
+                <option>Hardware Store</option>
+                <option>Nursery</option>
+                <option>Distributor</option>
+                <option>Home D&eacute;cor Retailer</option>
+                <option>Corporate</option>
+              </select>
+              <button class="fsubmit">Get Dealership Details &rarr;</button>
+              <p class="fnote">We'll respond within 24 hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAT BAR -->
+    <div class="stat-bar">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="stat-lbl">Established</div>
+                <div class="stat-val">1976</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="stat-lbl">Active Dealers</div>
+                <div class="stat-val">900+</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="stat-lbl">Cities</div>
+                <div class="stat-val">200+</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20 7H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-1 11H5V9h14v9zM7 4h10v2H7z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="stat-lbl">Mfg. Units</div>
+                <div class="stat-val">3 Advanced</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUSINESS TYPES GRID -->
+    <section class="sec biz-types-sec">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="sec-label">Who We Partner With</p>
+          <h2 class="sec-title">Built for <em>Every Channel</em></h2>
+          <p class="biz-sec-lead">
+            From neighbourhood nurseries to large home-décor retailers — our
+            900+ dealer network spans every corner of the gardening trade.
+          </p>
+        </div>
+        <div class="bento-grid">
+          <a
+            class="biz-card b1 feat-big"
+            href="#get-details"
+            aria-label="Apply as Nursery partner"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1200&q=80&auto=format&fit=crop"
+              alt="Lush plant nursery rows"
+              loading="lazy"
+            />
+            <span class="biz-card-num">01 &middot; Featured</span>
+            <div class="biz-card-content">
+              <h3 class="biz-card-title">Nurseries</h3>
+              <p class="biz-card-desc">
+                Pair every plant with a Garden's Need pot — 2,500+ SKUs across
+                plastic, fibre and rotomoulded ranges.
+              </p>
+              <span class="biz-card-cta">Become a Partner &rarr;</span>
+            </div>
+          </a>
+          <a
+            class="biz-card b2"
+            href="#get-details"
+            aria-label="Apply as Hardware Store partner"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=800&q=80&auto=format&fit=crop"
+              alt="Hardware store interior"
+              loading="lazy"
+            />
+            <span class="biz-card-num">02</span>
+            <div class="biz-card-content">
+              <h3 class="biz-card-title">Hardware Stores</h3>
+              <p class="biz-card-desc">
+                A fast-moving category with strong margins and year-round
+                demand.
+              </p>
+              <span class="biz-card-cta">Become a Partner &rarr;</span>
+            </div>
+          </a>
+          <a
+            class="biz-card b3"
+            href="#get-details"
+            aria-label="Apply as Distributor partner"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80&auto=format&fit=crop"
+              alt="Distribution warehouse"
+              loading="lazy"
+            />
+            <span class="biz-card-num">03</span>
+            <div class="biz-card-content">
+              <h3 class="biz-card-title">Distributors</h3>
+              <p class="biz-card-desc">
+                Exclusive territory rights and uninterrupted pan-India supply
+                backing.
+              </p>
+              <span class="biz-card-cta">Become a Partner &rarr;</span>
+            </div>
+          </a>
+          <a
+            class="biz-card b4"
+            href="#get-details"
+            aria-label="Apply as Home Décor Retailer partner"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80&auto=format&fit=crop"
+              alt="Home décor retail display"
+              loading="lazy"
+            />
+            <span class="biz-card-num">04</span>
+            <div class="biz-card-content">
+              <h3 class="biz-card-title">Home Décor Retailers</h3>
+              <p class="biz-card-desc">
+                Editorial-quality planters that complement luxury interiors.
+              </p>
+              <span class="biz-card-cta">Become a Partner &rarr;</span>
+            </div>
+          </a>
+          <a
+            class="biz-card b5"
+            href="#get-details"
+            aria-label="Apply as Corporate partner"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80&auto=format&fit=crop"
+              alt="Corporate office with planters"
+              loading="lazy"
+            />
+            <span class="biz-card-num">05</span>
+            <div class="biz-card-content">
+              <h3 class="biz-card-title">Corporate</h3>
+              <p class="biz-card-desc">
+                Bulk B2B orders for offices, gifting and project landscapes.
+              </p>
+              <span class="biz-card-cta">Become a Partner &rarr;</span>
+            </div>
+          </a>
+          <a
+            class="biz-card b6"
+            href="#get-details"
+            aria-label="Apply as Landscape Architect partner"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80&auto=format&fit=crop"
+              alt="Landscape architecture site"
+              loading="lazy"
+            />
+            <span class="biz-card-num">06</span>
+            <div class="biz-card-content">
+              <h3 class="biz-card-title">Landscape Architects</h3>
+              <p class="biz-card-desc">
+                Spec-grade ranges for residential and commercial landscape
+                projects.
+              </p>
+              <span class="biz-card-cta">Become a Partner &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEGACY -->
+    <section class="sec legacy-sec">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <div class="legacy-img-wrap">
+              <img
+                src="A_warm,_sunlit_minimalist_interior_202605051703.jpeg"
+                alt="Garden's Need bonsai planter in sunlit minimalist interior"
+              />
+              <span class="legacy-img-badge">Since 1976</span>
+            </div>
+            <p class="sec-label">Our Story</p>
+            <h2 class="sec-title">
+              Not a Startup. A <em>Legacy</em> That Grows With You.
+            </h2>
+            <p class="sec-desc mt-3">
+              For 50 years, Garden's Need has been part of India's gardening
+              journey. From small nurseries to large distributors, we've built a
+              network of 5,000+ partners who trust us for one simple reason —
+              consistency.<br /><br />We're not chasing trends. We're building a
+              category. Every plant deserves a Garden's Need pot.
+            </p>
+          </div>
+          <div class="col-lg-7">
+            <div class="legacy-point">
+              <div class="pt-dot">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s2-2 4-2c0 0-3.17-1-6 1z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="pt-title">ISO Certified Manufacturing</div>
+                <p class="pt-desc">
+                  ISO 9001:2015 certified production ensures consistent quality
+                  across every SKU, every batch — no surprises.
+                </p>
+              </div>
+            </div>
+            <div class="legacy-point">
+              <div class="pt-dot">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="pt-title">Strong Margins Guaranteed</div>
+                <p class="pt-desc">
+                  Designed to ensure dealers and distributors thrive with
+                  consistently healthy margins on every product line.
+                </p>
+              </div>
+            </div>
+            <div class="legacy-point">
+              <div class="pt-dot">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-.5 1.5l1.96 2.5H17V9.5h2.5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm11 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="pt-title">Reliable Pan-India Supply</div>
+                <p class="pt-desc">
+                  Active presence across 200+ cities with a robust logistics
+                  backbone ensuring timely, uninterrupted availability.
+                </p>
+              </div>
+            </div>
+            <div class="legacy-point">
+              <div class="pt-dot">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="pt-title">Established Brand Trust</div>
+                <p class="pt-desc">
+                  Dealers benefit directly from 50 years of brand-building,
+                  training, selling and strong national brand recall.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section class="sec why-sec" id="why">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="sec-label">Why Dealers Choose Us</p>
+          <h2 class="sec-title mx-auto" style="max-width: 560px">
+            Why <em>900+ Dealers</em> Choose Garden's Need
+          </h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-4">
+            <div class="feat-card">
+              <div class="feat-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"
+                  />
+                </svg>
+              </div>
+              <div class="feat-title">High Demand Category</div>
+              <p class="feat-desc">
+                Planters are super-purchase products with consistent consumer
+                demand across all seasons.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="feat-card">
+              <div class="feat-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"
+                  />
+                </svg>
+              </div>
+              <div class="feat-title">Wide Product Range</div>
+              <p class="feat-desc">
+                2,500+ SKUs across plastic, roto, fibre and accessories —
+                something for every customer and budget.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="feat-card">
+              <div class="feat-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+                  />
+                </svg>
+              </div>
+              <div class="feat-title">Strong Margins</div>
+              <p class="feat-desc">
+                Designed to ensure dealers and distributors thrive with healthy,
+                consistent margins on every product.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="feat-card">
+              <div class="feat-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"
+                  />
+                </svg>
+              </div>
+              <div class="feat-title">Reliable Supply</div>
+              <p class="feat-desc">
+                Continuous stock availability with strong manufacturing and
+                zero-compromise supply chain support.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="feat-card">
+              <div class="feat-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <div class="feat-title">Established Brand Trust</div>
+              <p class="feat-desc">
+                Dealers benefit from 50 years of brand equity — training,
+                selling and national brand recall built-in.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="feat-card">
+              <div class="feat-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  />
+                </svg>
+              </div>
+              <div class="feat-title">Pan India Network</div>
+              <p class="feat-desc">
+                Active network spread across 200+ cities — a community of 900+
+                dealers growing together.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKET -->
+    <section class="market-sec">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <p class="sec-label">Market Opportunity</p>
+            <h2 class="sec-title">
+              A Growing Market. <em>A Proven Brand.</em> A Big Opportunity.
+            </h2>
+            <p class="body-p mt-3">
+              India's gardening and home décor market is growing rapidly.
+              Planters are a core category with rising demand. With Gardens
+              Need, you become part of a 50-year-old distribution ecosystem
+              built for scale.
+            </p>
+            <a href="#get-details" class="btn-white-gn mt-4"
+              >Apply for Dealership Now</a
+            >
+          </div>
+          <div class="col-lg-6">
+            <p class="sec-label mb-3">Who Can Apply</p>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="who-card">
+                  <div class="who-icon">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="who-name">Hardware Stores</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="who-card">
+                  <div class="who-icon">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s2-2 4-2c0 0-3.17-1-6 1z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="who-name">Nurseries</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="who-card">
+                  <div class="who-icon">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"
+                      />
+                    </svg>
+                  </div>
+                  <p class="who-name">Distributors</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="who-card">
+                  <div class="who-icon">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                    </svg>
+                  </div>
+                  <p class="who-name">Home Décor Retailers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <div class="cta-banner">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-between gap-4"
+        >
+          <h2>
+            Apply for Dealership Now<br /><em
+              >Start your sustainable business opportunity.</em
+            >
+          </h2>
+          <a href="#get-details" class="btn-white-gn"
+            >Apply for Dealership Now</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <section class="sec products-sec">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="sec-label">Our Range</p>
+          <h2 class="sec-title">Products That <em>Sell Themselves</em></h2>
+          <p
+            class="text-center"
+            style="color: var(--text-muted); font-size: 0.95rem"
+          >
+            Designed for durability and mass demand
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-6 col-sm-4 col-lg">
+            <div class="product-card">
+              <div class="prod-img">
+                <img
+                  src="Final (1).png"
+                  alt="Injection moulded textured white planters"
+                />
+              </div>
+              <div class="prod-name">Injection Planters</div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-lg">
+            <div class="product-card">
+              <div class="prod-img">
+                <img
+                  src="1 (5).jpg.jpeg"
+                  alt="Tall blow moulded white textured planters with orchids"
+                />
+              </div>
+              <div class="prod-name">Blow Moulded Planters</div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-lg">
+            <div class="product-card">
+              <div class="prod-img">
+                <img
+                  src="ChatGPT Image May 5, 2026, 04_07_24 PM.png"
+                  alt="Rotomoulded designer blue planters"
+                />
+              </div>
+              <div class="prod-name">Rotomoulded Planters</div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-lg">
+            <div class="product-card">
+              <div class="prod-img">
+                <img
+                  src="Ultra-realistic_premium_product_photography_featuring_202605061450.jpeg"
+                  alt="Premium fibre planter with orchids"
+                />
+              </div>
+              <div class="prod-name">Fibre Planters</div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-lg">
+            <div class="product-card">
+              <div class="prod-img">
+                <img
+                  src="A_warm,_cozy_living_room_202605051704.jpeg"
+                  alt="Woven plant stand accessory in cozy living room"
+                />
+              </div>
+              <div class="prod-name">Gardening Accessories</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUSTED -->
+    <section class="sec trusted-sec">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="sec-label">Our Reach</p>
+          <h2 class="sec-title">Trusted Across <em>India</em></h2>
+          <p
+            style="
+              color: var(--text-muted);
+              font-size: 0.95rem;
+              max-width: 480px;
+              margin: 0 auto;
+            "
+          >
+            A dealer-trusted business backed by strong brand presence and
+            Ramcomer's Choice recognition.
+          </p>
+        </div>
+        <div class="row g-4 justify-content-center mb-4">
+          <div class="col-6 col-md-3">
+            <div class="big-stat">
+              <div class="big-stat-num">759</div>
+              <div class="big-stat-lbl">Active Dealers</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="big-stat">
+              <div class="big-stat-num">163+</div>
+              <div class="big-stat-lbl">Cities</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="big-stat">
+              <div class="big-stat-num">&#8377;52 Cr</div>
+              <div class="big-stat-lbl">Revenue</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="big-stat">
+              <div class="big-stat-num">4,070+</div>
+              <div class="big-stat-lbl">SKUs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANUFACTURING -->
+    <section class="sec mfg-sec">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="sec-label">Infrastructure</p>
+          <h2 class="sec-title">
+            Built for Scale. <em>Built for Reliability.</em>
+          </h2>
+        </div>
+        <div class="row g-4 mb-5">
+          <div class="col-md-4">
+            <div class="mfg-card">
+              <div class="mfg-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"
+                  />
+                </svg>
+              </div>
+              <div class="mfg-title">3 Advanced Manufacturing Units</div>
+              <p class="mfg-desc">
+                State-of-the-art production facilities ensuring scale, quality
+                and continuous supply.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mfg-card">
+              <div class="mfg-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s2-2 4-2c0 0-3.17-1-6 1z"
+                  />
+                </svg>
+              </div>
+              <div class="mfg-title">
+                Injection, Roto &amp; Roto Capabilities
+              </div>
+              <p class="mfg-desc">
+                Full-spectrum manufacturing from injection moulding to
+                rotomoulding — versatile product output at scale.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mfg-card">
+              <div class="mfg-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                  />
+                </svg>
+              </div>
+              <div class="mfg-title">New Expansion at Diskal</div>
+              <p class="mfg-desc">
+                Our latest manufacturing unit expansion ensures capacity to meet
+                growing national demand seamlessly.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <p class="sec-label mb-4">Certifications</p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <div class="cert-badge">ISO 9001:2015</div>
+            <div class="cert-badge">SEDEX</div>
+            <div class="cert-badge">C-TPAT</div>
+            <div class="cert-badge">GRS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="sec services-sec">
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-8">
+            <p class="sec-label">Services</p>
+            <h2 class="sec-title mb-0">
+              End-to-End Garden &amp; Landscape Services<br />For
+              <em>Growth-Focused Properties.</em>
+            </h2>
+          </div>
+        </div>
+        <div class="row g-4 mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="serv-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s2-2 4-2c0 0-3.17-1-6 1z"
+                  />
+                </svg>
+              </div>
+              <div class="serv-title">Landscape Design</div>
+              <p class="serv-desc">
+                Customised outdoor planning for residential and commercial
+                properties that need a lasting impression.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="serv-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"
+                  />
+                </svg>
+              </div>
+              <div class="serv-title">Garden Maintenance</div>
+              <p class="serv-desc">
+                Routine work that keeps green spaces pristine, clean and
+                ever-ready — ideal for corporate clients.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="serv-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 1v11.5c-.5-.3-1-.5-1.5-.5C8.6 12 7 13.6 7 15.5S8.6 19 10.5 19c1.6 0 3-1.1 3.4-2.5H14V5h3V3h-5z"
+                  />
+                </svg>
+              </div>
+              <div class="serv-title">Irrigation Systems</div>
+              <p class="serv-desc">
+                Smart watering systems built to maintain lush green landscapes
+                and reduce water wastage efficiently.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="services-img-wrap">
+              <img
+                src="A_premium_minimalist_interior_styling_202605061231.jpeg"
+                alt="Premium minimalist interior styled with Garden's Need vase"
+              />
+              <div class="services-img-overlay"></div>
+              <div class="services-img-caption">
+                <div class="small-lbl">Editorial Styling</div>
+                <div class="big-q">
+                  Curated for spaces that speak quietly.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <h3>
+            Spaces Reimagined For
+            <em>Performance, Prestige, And Daily Experience.</em>
+          </h3>
+          <a href="#get-details" class="btn-white-gn"
+            >Request Full Portfolio Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- LANDSCAPING TEAM -->
+    <section class="sec landscape-sec">
+      <div class="container">
+        <div class="landscape-inner">
+          <div class="row g-5">
+            <div class="col-lg-5">
+              <p class="sec-label">Our Team</p>
+              <h2 class="sec-title">
+                A Landscaping Team Built Around
+                <em>Quality, Reliability, And Long-Term Value.</em>
+              </h2>
+              <p
+                style="
+                  color: var(--text-muted);
+                  font-size: 0.92rem;
+                  line-height: 1.8;
+                "
+                class="mt-3 mb-4"
+              >
+                Every member of our team is dedicated to delivering spaces that
+                perform beautifully day after day.
+              </p>
+              <div class="value-row">
+                <div class="val-check">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="val-title">Quality</div>
+                  <p class="val-desc">
+                    Consistent, uncompromising craftsmanship in every project we
+                    deliver.
+                  </p>
+                </div>
+              </div>
+              <div class="value-row">
+                <div class="val-check">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="val-title">Reliability</div>
+                  <p class="val-desc">
+                    Dependable support and service, always on time — no
+                    exceptions.
+                  </p>
+                </div>
+              </div>
+              <div class="value-row">
+                <div class="val-check">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="val-title">Long-Term Value</div>
+                  <p class="val-desc">
+                    Designs built to last — spaces that appreciate with time and
+                    use.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <p class="sec-label">Client Appreciation</p>
+              <h3 class="mb-4" style="font-size: 1.5rem; color: var(--gn-900)">
+                What Commercial Clients
+                <em style="font-style: italic; color: var(--gn-600)"
+                  >Appreciate Most.</em
+                >
+              </h3>
+              <div class="client-point">
+                <div class="cp-title">Quality</div>
+                <p class="cp-desc">
+                  Commercial spaces receive consistent finishing and reliable
+                  material quality — details that matter.
+                </p>
+              </div>
+              <div class="client-point">
+                <div class="cp-title">Reliability</div>
+                <p class="cp-desc">
+                  Long-term property clients rely on dependable planning, care
+                  and professional expertise.
+                </p>
+              </div>
+              <div class="client-point">
+                <div class="cp-title">Long-Term Value</div>
+                <p class="cp-desc">
+                  Smart, enduring spaces that improve long-term aesthetics,
+                  experience and property confidence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <p class="sec-label" style="color: var(--gn-300)">Join Us</p>
+        <h2>Join <em>900+ Dealers</em> Growing With Garden's Need</h2>
+        <p>
+          Start your journey with a trusted and scalable business opportunity.
+          Our team will reach out within 24 hours.
+        </p>
+        <a
+          href="#get-details"
+          class="btn-white-gn"
+          style="font-size: 1rem; padding: 16px 42px"
+          >Apply for Dealership Now &rarr;</a
+        >
+        <div
+          class="mt-4"
+          style="color: rgba(255, 255, 255, 0.3); font-size: 0.8rem"
+        >
+          Let's Plan A Landscape That Sells Your Property Better.
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="gn-footer">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-between gap-3"
+        >
+          <div class="footer-logo">
+            <img src="logo.jpg" alt="Garden's Need" />
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="footer-cert">ISO 9001:2015</span>
+            <span class="footer-cert">SEDEX</span>
+            <span class="footer-cert">C-TPAT</span>
+            <span class="footer-cert">GRS</span>
+            <span class="footer-cert">900+ Dealers</span>
+          </div>
+          <div class="footer-copy">
+            &copy; 2025 Garden's Need. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- STICKY CTAs (Call / WhatsApp / Enquiry) -->
+    <div class="sticky-cta-stack" aria-label="Quick contact options">
+      <a
+        href="tel:+910000000000"
+        class="sticky-fab-icon sticky-fab-call"
+        aria-label="Call Garden's Need"
+      >
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21a1 1 0 0 0 .25-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z"
+          />
+        </svg>
+      </a>
+      <a
+        href="https://wa.me/910000000000?text=Hi%2C%20I%27m%20interested%20in%20a%20Garden%27s%20Need%20dealership."
+        target="_blank"
+        rel="noopener"
+        class="sticky-fab-icon sticky-fab-wa"
+        aria-label="WhatsApp Garden's Need"
+      >
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4 7.94 7.94 0 0 0 5.1 15.85L4 20l4.25-1.11a7.93 7.93 0 0 0 3.79.96h.01a7.94 7.94 0 0 0 5.55-13.53zM12.05 18.5h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.52.66.67-2.46-.16-.25a6.6 6.6 0 1 1 12.23-3.5 6.6 6.6 0 0 1-6.61 6.61zm3.62-4.95c-.2-.1-1.18-.58-1.36-.65-.18-.07-.31-.1-.45.1s-.51.65-.62.78c-.12.13-.23.15-.42.05-.2-.1-.84-.31-1.6-.99-.59-.52-.99-1.17-1.1-1.37s-.01-.31.09-.4c.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.45-1.07-.61-1.47-.16-.39-.33-.34-.45-.34h-.39c-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.66 0 .98.71 1.93.81 2.06.1.13 1.4 2.13 3.39 2.99.47.2.85.32 1.14.41.48.15.92.13 1.27.08.39-.06 1.18-.48 1.35-.95.17-.47.17-.87.12-.95-.05-.08-.18-.13-.38-.22z"
+          />
+        </svg>
+      </a>
+      <button
+        type="button"
+        class="sticky-fab-pill"
+        data-bs-toggle="modal"
+        data-bs-target="#enquiryModal"
+        aria-label="Open enquiry form"
+      >
+        <span class="pill-icon">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+            />
+          </svg>
+        </span>
+        <span>Enquire Now</span>
+        <span class="pill-arrow">&rarr;</span>
+      </button>
+    </div>
+
+    <!-- ENQUIRY MODAL -->
+    <div
+      class="modal fade"
+      id="enquiryModal"
+      tabindex="-1"
+      aria-labelledby="enquiryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="modal-close-x"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            &times;
+          </button>
+          <div class="form-card">
+            <p class="form-card-title" id="enquiryModalLabel">
+              Get Dealership Details
+            </p>
+            <p class="form-card-sub">
+              Our team will contact you within 24 hours
+            </p>
+            <label class="flbl">Name</label>
+            <input class="finp" type="text" placeholder="Your full name" />
+            <label class="flbl">Phone</label>
+            <input class="finp" type="tel" placeholder="+91 00000 00000" />
+            <label class="flbl">Business Type</label>
+            <select class="finp">
+              <option value>Select Business Type</option>
+              <option>Hardware Store</option>
+              <option>Nursery</option>
+              <option>Distributor</option>
+              <option>Home D&eacute;cor Retailer</option>
+              <option>Corporate</option>
+            </select>
+            <button class="fsubmit">Get Dealership Details &rarr;</button>
+            <p class="fnote">We'll respond within 24 hours</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Open enquiry popup on every #get-details CTA across the site
+      (function () {
+        var modalEl = document.getElementById("enquiryModal");
+        if (!modalEl || typeof bootstrap === "undefined") return;
+        document
+          .querySelectorAll('a[href="#get-details"]')
+          .forEach(function (a) {
+            a.addEventListener("click", function (e) {
+              e.preventDefault();
+              bootstrap.Modal.getOrCreateInstance(modalEl).show();
+            });
+          });
+      })();
+
+      // Reveal sticky CTAs only after a slight scroll
+      (function () {
+        var ctaStack = document.querySelector(".sticky-cta-stack");
+        if (!ctaStack) return;
+        var threshold = 160;
+        function toggleSticky() {
+          if (window.scrollY > threshold) {
+            ctaStack.classList.add("is-visible");
+          } else {
+            ctaStack.classList.remove("is-visible");
+          }
+        }
+        window.addEventListener("scroll", toggleSticky, { passive: true });
+        toggleSticky();
+      })();
+    </script>
+  </body>
+</html>
