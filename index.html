@@ -700,16 +700,16 @@
       /* LEGACY IMAGE */
       .legacy-img-wrap {
         position: relative;
-        margin-bottom: 28px;
+        margin-top: 8px;
         border-radius: var(--r-lg);
         overflow: hidden;
         box-shadow: 0 18px 48px rgba(10, 31, 15, 0.16);
       }
       .legacy-img-wrap img {
         width: 100%;
-        height: auto;
-        max-height: 560px;
-        object-fit: contain;
+        height: 380px;
+        object-fit: cover;
+        object-position: center;
         display: block;
         background: var(--gn-50);
         transition: 0.4s;
@@ -2139,8 +2139,19 @@
     <!-- LEGACY -->
     <section class="sec legacy-sec">
       <div class="container">
-        <div class="row g-5 align-items-center">
+        <div class="row g-5 align-items-start">
           <div class="col-lg-5">
+            <p class="sec-label">Our Story</p>
+            <h2 class="sec-title">
+              Not a Startup. A <em>Legacy</em> That Grows With You.
+            </h2>
+            <p class="sec-desc mt-3 mb-4">
+              For 50 years, Garden's Need has been part of India's gardening
+              journey. From small nurseries to large distributors, we've built a
+              network of 5,000+ partners who trust us for one simple reason —
+              consistency.<br /><br />We're not chasing trends. We're building a
+              category. Every plant deserves a Garden's Need pot.
+            </p>
             <div class="legacy-img-wrap">
               <img
                 src="A_warm,_sunlit_minimalist_interior_202605051703.jpeg"
@@ -2148,17 +2159,6 @@
               />
               <span class="legacy-img-badge">Since 1976</span>
             </div>
-            <p class="sec-label">Our Story</p>
-            <h2 class="sec-title">
-              Not a Startup. A <em>Legacy</em> That Grows With You.
-            </h2>
-            <p class="sec-desc mt-3">
-              For 50 years, Garden's Need has been part of India's gardening
-              journey. From small nurseries to large distributors, we've built a
-              network of 5,000+ partners who trust us for one simple reason —
-              consistency.<br /><br />We're not chasing trends. We're building a
-              category. Every plant deserves a Garden's Need pot.
-            </p>
           </div>
           <div class="col-lg-7">
             <div class="legacy-point">
