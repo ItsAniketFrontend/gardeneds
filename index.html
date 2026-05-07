@@ -1224,6 +1224,27 @@
         background: var(--gn-50);
         transform: translateY(-1px);
       }
+      .btn-accent-gn {
+        background: linear-gradient(135deg, var(--gn-400), var(--gn-500));
+        color: #fff !important;
+        padding: 16px 42px;
+        border-radius: 50px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        box-shadow: 0 12px 28px rgba(58, 138, 78, 0.45);
+        transition: 0.25s;
+      }
+      .btn-accent-gn:hover {
+        background: linear-gradient(135deg, var(--gn-500), var(--gn-600));
+        transform: translateY(-2px);
+        box-shadow: 0 16px 34px rgba(58, 138, 78, 0.55);
+        color: #fff !important;
+      }
       .who-card {
         background: rgba(255, 255, 255, 0.07);
         border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1632,7 +1653,7 @@
         z-index: 1;
       }
       .sticky-fab-call {
-        background: linear-gradient(135deg, #34a853 0%, #1f6f3a 100%);
+        background: linear-gradient(135deg, #2b3645 0%, #111827 100%);
       }
       .sticky-fab-wa {
         background: linear-gradient(135deg, #25d366 0%, #128c4f 100%);
@@ -1645,17 +1666,17 @@
         align-items: center;
         gap: 12px;
         text-decoration: none;
-        color: #fff !important;
-        background: linear-gradient(135deg, #2d6b3c 0%, #122b18 100%);
+        color: var(--gn-900) !important;
+        background: #ffffff;
+        border: 1.5px solid var(--gn-100);
         font-family: "Outfit", sans-serif;
         font-weight: 700;
         font-size: 0.92rem;
         letter-spacing: 0.01em;
         white-space: nowrap;
-        border: none;
         cursor: pointer;
-        box-shadow: 0 18px 38px rgba(18, 43, 24, 0.4),
-          0 4px 12px rgba(0, 0, 0, 0.14);
+        box-shadow: 0 18px 38px rgba(18, 43, 24, 0.22),
+          0 4px 12px rgba(0, 0, 0, 0.08);
         position: relative;
         overflow: hidden;
         transition: 0.28s cubic-bezier(0.2, 0.7, 0.3, 1);
@@ -1670,7 +1691,7 @@
         background: linear-gradient(
           120deg,
           transparent 0%,
-          rgba(255, 255, 255, 0.18) 50%,
+          rgba(58, 138, 78, 0.12) 50%,
           transparent 100%
         );
         animation: fabShimmer 3s ease-in-out infinite;
@@ -1686,14 +1707,16 @@
       }
       .sticky-fab-pill:hover {
         transform: translateY(-3px);
-        box-shadow: 0 22px 44px rgba(18, 43, 24, 0.48),
-          0 6px 14px rgba(0, 0, 0, 0.18);
+        background: var(--cream);
+        border-color: var(--gn-300);
+        box-shadow: 0 22px 44px rgba(18, 43, 24, 0.28),
+          0 6px 14px rgba(0, 0, 0, 0.12);
       }
       .sticky-fab-pill .pill-icon {
         width: 36px;
         height: 36px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.18);
+        background: var(--gn-50);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -1702,7 +1725,7 @@
       .sticky-fab-pill .pill-icon svg {
         width: 18px;
         height: 18px;
-        fill: #fff;
+        fill: var(--gn-700);
       }
       .sticky-fab-pill .pill-arrow {
         font-size: 1.05rem;
@@ -1865,6 +1888,13 @@
         .cta-banner {
           text-align: center;
         }
+        .cta-banner > .container > div {
+          justify-content: center !important;
+          text-align: center;
+        }
+        .cta-banner h2 {
+          width: 100%;
+        }
         .hero-form-panel {
           padding: 36px 18px 44px;
         }
@@ -1960,7 +1990,7 @@
                     <option>Home D&eacute;cor Retailer</option>
                   </select>
                   <button class="fsubmit">
-                    Get Dealership Details &rarr;
+                    Submit My Application &rarr;
                   </button>
                   <p class="fnote">We'll respond within 24 hours</p>
                 </div>
@@ -2032,7 +2062,7 @@
                 <option>Home D&eacute;cor Retailer</option>
                 <option>Corporate</option>
               </select>
-              <button class="fsubmit">Get Dealership Details &rarr;</button>
+              <button class="fsubmit">Submit My Application &rarr;</button>
               <p class="fnote">We'll respond within 24 hours</p>
             </div>
           </div>
@@ -2607,6 +2637,17 @@
               <div class="prod-name">Gardening Accessories</div>
             </div>
           </div>
+          <div class="col-6 col-sm-4 col-lg">
+            <div class="product-card">
+              <div class="prod-img">
+                <img
+                  src="Ultra-realistic_luxury_home_decor_editorial_202605061523.jpeg"
+                  alt="Designer luxury planters in editorial home decor setting"
+                />
+              </div>
+              <div class="prod-name">Designer Planters</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -2978,10 +3019,7 @@
           Start your journey with a trusted and scalable business opportunity.
           Our team will reach out within 24 hours.
         </p>
-        <a
-          href="#get-details"
-          class="btn-white-gn"
-          style="font-size: 1rem; padding: 16px 42px"
+        <a href="#get-details" class="btn-accent-gn"
           >Apply for Dealership Now &rarr;</a
         >
         <div
@@ -3099,7 +3137,7 @@
               <option>Home D&eacute;cor Retailer</option>
               <option>Corporate</option>
             </select>
-            <button class="fsubmit">Get Dealership Details &rarr;</button>
+            <button class="fsubmit">Submit My Application &rarr;</button>
             <p class="fnote">We'll respond within 24 hours</p>
           </div>
         </div>
